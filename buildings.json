@@ -1,0 +1,357 @@
+{
+    "ACB": {
+        "name": "Academic Classroom Building",
+        "lat": 35.849648,
+        "lon": -86.361792
+    },
+    "AEB": {
+        "name": "Applied Engineering Building",
+        "lat": 35.844576,
+        "lon": -86.361308
+    },
+    "ALUM": {
+        "name": "Alumni House",
+        "lat": 35.845084,
+        "lon": -86.372347
+    },
+    "AMG": {
+        "name": "Alumni Memorial Gym",
+        "lat": 35.851115,
+        "lon": -86.370050
+    },
+    "BAS": {
+        "name": "Business and Aerospace Building",
+        "lat": 35.848272,
+        "lon": -86.363330
+    },
+    "BDA": {
+        "name": "Boutwell Dramatic Arts Building",
+        "lat": 35.849813,
+        "lon": -86.366266
+    },
+    "BH": {
+        "name": "Beasley Hall",
+        "lat": 35.846379,
+        "lon": -86.367063
+    },
+    "BRAGG": {
+        "name": "John Bragg Media and Entertainment Building",
+        "lat": 35.846993,
+        "lon": -86.362644
+    },
+    "CAB": {
+        "name": "Cope Administration Building",
+        "lat": 35.846286,
+        "lon": -86.369071
+    },
+    "CH": {
+        "name": "College Heights Building",
+        "lat": 35.842944,
+        "lon": -86.365593
+    },
+    "CKNB": {
+        "name": "Cason-Kennedy Nursing Building",
+        "lat": 35.849682,
+        "lon": -86.365084
+    },
+    "COE": {
+        "name": "College of Education Building",
+        "lat": 35.847751,
+        "lon": -86.362240
+    },
+    "CORL": {
+        "name": "Corlew Hall",
+        "lat": 35.848744,
+        "lon": -86.364682
+    },
+    "DH": {
+        "name": "Deere Hall",
+        "lat": 35.845406,
+        "lon": -86.363329
+    },
+    "DSB": {
+        "name": "Davis Science Building",
+        "lat": 35.847281,
+        "lon": -86.366915
+    },
+    "DYS": {
+        "name": "Tennessee Center for the Study and Treatment of Dyslexia",
+        "lat": 35.844168,
+        "lon": -86.366701
+    },
+    "EHS": {
+        "name": "Ellington Human Sciences Building",
+        "lat": 35.851497,
+        "lon": -86.371699
+    },
+    "FAIR": {
+        "name": "Fairview Building",
+        "lat": 35.854086,
+        "lon": -86.373112
+    },
+    "FH": {
+        "name": "Forrest Hall",
+        "lat": 35.848909,
+        "lon": -86.365910
+    },
+    "GRH": {
+        "name": "Gracy Hall",
+        "lat": 35.846360,
+        "lon": -86.366453
+    },
+    "HC": {
+        "name": "Horticulture Facility",
+        "lat": 35.850441,
+        "lon": -86.361971
+    },
+    "HMA": {
+        "name": "Housing Maintenance Annex",
+        "lat": 35.850525,
+        "lon": -86.364024
+    },
+    "HOB": {
+        "name": "Holmes Building (Maintenance Complex)",
+        "lat": 35.852630,
+        "lon": -86.364067
+    },
+    "HONR": {
+        "name": "Paul W. Martin Sr. Honors Building",
+        "lat": 35.846999,
+        "lon": -86.361002
+    },
+    "ING": {
+        "name": "Sam H. Ingram Building",
+        "lat": 35.845830,
+        "lon": -86.372456
+    },
+    "JACK": {
+        "name": "Tom H. Jackson Building",
+        "lat": 35.849888,
+        "lon": -86.369843
+    },
+    "JCH": {
+        "name": "Jim Cummings Hall",
+        "lat": 35.848809,
+        "lon": -86.362762
+    },
+    "JH": {
+        "name": "Jones Hall",
+        "lat": 35.848914,
+        "lon": -86.367443
+    },
+    "JUB": {
+        "name": "James Union Building",
+        "lat": 35.848242,
+        "lon": -86.370486
+    },
+    "JUDD": {
+        "name": "Judd Hall",
+        "lat": 35.845717,
+        "lon": -86.366506
+    },
+    "KOM": {
+        "name": "Kirksey Old Main",
+        "lat": 35.849505,
+        "lon": -86.368804
+    },
+    "KSHF": {
+        "name": "Emmett and Rose Kennon Sports Hall of Fame",
+        "lat": 35.852974,
+        "lon": -86.368043
+    },
+    "KUC": {
+        "name": "Keathley University Center",
+        "lat": 35.848112,
+        "lon": -86.366266
+    },
+    "LH": {
+        "name": "Lyon Hall",
+        "lat": 35.847643,
+        "lon": -86.370816
+    },
+    "LIB": {
+        "name": "James E. Walker Library",
+        "lat": 35.846400,
+        "lon": -86.363911
+    },
+    "LRC": {
+        "name": "Ned McWherter Learning Resources Center",
+        "lat": 35.847771,
+        "lon": -86.364912
+    },
+    "MARY": {
+        "name": "Miss Mary Hall",
+        "lat": 35.847402,
+        "lon": -86.370580
+    },
+    "MB": {
+        "name": "McFarland Building",
+        "lat": 35.849344,
+        "lon": -86.363065
+    },
+    "MC": {
+        "name": "Murphy Center",
+        "lat": 35.852385,
+        "lon": -86.369556
+    },
+    "MEC": {
+        "name": "Andrew Woodfin Miller, Sr. Education Center",
+        "lat": 35.849485,
+        "lon": -86.382306
+    },
+    "MOH": {
+        "name": "Monohan Hall",
+        "lat": 35.846541,
+        "lon": -86.370411
+    },
+    "NICK": {
+        "name": "Nicks Hall",
+        "lat": 35.845304,
+        "lon": -86.362753
+    },
+    "PCS": {
+        "name": "Homer Pittard Campus School",
+        "lat": 35.847133,
+        "lon": -86.374870
+    },
+    "PH": {
+        "name": "Peck Hall",
+        "lat": 35.848159,
+        "lon": -86.368922
+    },
+    "PHLP": {
+        "name": "Project Help",
+        "lat": 35.844834,
+        "lon": -86.366595
+    },
+    "PSB": {
+        "name": "Printing Services Building",
+        "lat": 35.852805,
+        "lon": -86.362505
+    },
+    "PTS": {
+        "name": "Parking and Transportation Services",
+        "lat": 35.842717,
+        "lon": -86.355443
+    },
+    "REC": {
+        "name": "Health, Wellness, and Recreation Center",
+        "lat": 35.846571,
+        "lon": -86.358180
+    },
+    "REH": {
+        "name": "Reynolds Hall",
+        "lat": 35.846506,
+        "lon": -86.370634
+    },
+    "RH": {
+        "name": "Rutledge Hall",
+        "lat": 35.849166,
+        "lon": -86.370307
+    },
+    "SAG": {
+        "name": "Stark Agriculture Center",
+        "lat": 35.849576,
+        "lon": -86.364049
+    },
+    "SCA": {
+        "name": "Scarlett Commons Apartments",
+        "lat": 35.849059,
+        "lon": -86.357565
+    },
+    "SCC": {
+        "name": "Sports Club Complex",
+        "lat": 35.841741,
+        "lon": -86.357560
+    },
+    "SCCM": {
+        "name": "School of Concrete and Construction Management",
+        "lat": 35.845594,
+        "lon": -86.361145
+    },
+    "SCI": {
+        "name": "Science Building",
+        "lat": 35.846081,
+        "lon": -86.365304
+    },
+    "SFA": {
+        "name": "Saunders Fine Arts Building",
+        "lat": 35.849843,
+        "lon": -86.367354
+    },
+    "SIMS": {
+        "name": "Sims Hall",
+        "lat": 35.845744,
+        "lon": -86.367097
+    },
+    "SMH": {
+        "name": "Smith Hall",
+        "lat": 35.846087,
+        "lon": -86.367600
+    },
+    "SSAC": {
+        "name": "Student Services and Admissions Center",
+        "lat": 35.847859,
+        "lon": -86.359266
+    },
+    "STU": {
+        "name": "Student Union Building",
+        "lat": 35.848008,
+        "lon": -86.360512
+    },
+    "TB": {
+        "name": "Telescope Building",
+        "lat": 35.847753,
+        "lon": -86.357393
+    },
+    "TCM": {
+        "name": "Telecommunications Building",
+        "lat": 35.852184,
+        "lon": -86.363538
+    },
+    "TLC": {
+        "name": "Tennessee Livestock Center",
+        "lat": 35.851763,
+        "lon": -86.362310
+    },
+    "TODD": {
+        "name": "Andrew L. Todd Hall",
+        "lat": 35.848330,
+        "lon": -86.367155
+    },
+    "UP": {
+        "name": "University Police",
+        "lat": 35.842493,
+        "lon": -86.369318
+    },
+    "VA": {
+        "name": "Vocational Agriculture",
+        "lat": 35.850679,
+        "lon": -86.362324
+    },
+    "WC": {
+        "name": "Woodmore (Chris Young Café)",
+        "lat": 35.846029,
+        "lon": -86.366328
+    },
+    "WH": {
+        "name": "Warehouse (Maintenance Complex)",
+        "lat": 35.853703,
+        "lon": -86.363755
+    },
+    "WMB": {
+        "name": "Wright Music Building",
+        "lat": 35.849878,
+        "lon": -86.366776
+    },
+    "WPS": {
+        "name": "Wiser-Patten Science Hall",
+        "lat": 35.847255,
+        "lon": -86.367493
+    },
+    "WSC": {
+        "name": "Wood-Stegall Center",
+        "lat": 35.844673,
+        "lon": -86.369314
+    }
+}
