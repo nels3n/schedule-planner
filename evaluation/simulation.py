@@ -51,9 +51,33 @@ def score_schedule(schedule, weights):
 
     return total
 
+def student_pick(schedule_a,schedule_b, weights):
+    """This function will get the scores of two random schedules and compare their scores"""
+    # gets scores for each schedule
+    score_a = score_schedule(schedule_a,weights)
+    score_b = score_schedule(schedule_b,weights)
+    # compare scores
+    if score_a < score_b:
+        return "A"
+    else:
+        return "B"
+    
 if __name__ == "__main__":
+
     # random schedule
-    rand = random_schedule()
-    print(f"Random schedule features: {rand}")
-    print(f"Features scaled: {scale_features(rand)}")
-    print(f"Score: {score_schedule(rand,STUDENTS["hates_early"])}")
+    schedule_a = random_schedule()
+    schedule_b = random_schedule()
+    print(f"Random schedule features for A: {schedule_a}")
+    print(f"Random schedule features for B: {schedule_b}")
+    print(f"Features scaled (0-1) for A: {scale_features(schedule_a)}")
+    print(f"Features scaled (0-1) for B: {scale_features(schedule_b)}")
+    print(f"Score A: {score_schedule(schedule_a,STUDENTS['hates_early'])}")
+    print(f"Score B: {score_schedule(schedule_b,STUDENTS['hates_early'])}")
+    print(f"Schedule {student_pick(schedule_a,schedule_b,STUDENTS['hates_early'])} WINS!")
+    print('-'*30)
+    # known answer - 'hates_early' student will pick schedule b
+    test_a = {"gaps": 0, "walk": 5, "early": 1, "friday": 0}
+    test_b = {"gaps": 0, "walk": 5, "early": 0, "friday": 0}
+    print(f"Schedule {student_pick(test_a,test_b,STUDENTS['hates_early'])} WINS!")
+    
+    
