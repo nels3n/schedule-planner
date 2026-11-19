@@ -37,9 +37,23 @@ def scale_features(schedule):
 
     return scaled_values
 
+def score_schedule(schedule, weights):
+    """This function will loop over the scaled features from a schedule and 
+    weights given by a student's dislikes, multiply and add them up to get a total score """
+    # call scale_features on schedule so scaling is not forgotten
+    scaled_schedule = scale_features(schedule)
+    # initiate a total
+    total = 0
+    # loop over keys in scaled_schedule
+    for key in scaled_schedule:
+       # multiply the features and weights and add them to the total
+       total += scaled_schedule[key]*weights[key]
 
+    return total
 
 if __name__ == "__main__":
+    # random schedule
     rand = random_schedule()
-    print(rand)
-    print(scale_features(rand))
+    print(f"Random schedule features: {rand}")
+    print(f"Features scaled: {scale_features(rand)}")
+    print(f"Score: {score_schedule(rand,STUDENTS["hates_early"])}")
