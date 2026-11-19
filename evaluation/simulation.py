@@ -61,7 +61,34 @@ def student_pick(schedule_a,schedule_b, weights):
         return "A"
     else:
         return "B"
+
+def make_pairs(weights,num_pairs):
+    """This function will generate random schedule pairs (A and B), filter out ties,
+    Record the correct anser for each pair (one the student picks) and return the full list (num_pairs)"""
+    # empty list to hold the pairs
+    pairs = []
+    # keep going while the length of pairs is less than the number of pairs needed
+    while len(pairs) < num_pairs:
+        # create two random schedules
+        schedule_a = random_schedule()
+        schedule_b = random_schedule()
+        # get the scores of each
+        score_a = score_schedule(schedule_a,weights)
+        score_b = score_schedule(schedule_b,weights)
+        # compare if a tie - ignore
+        if score_a == score_b:
+            continue
+        # get result
+        result = student_pick(schedule_a,schedule_b,weights)
+        # append to list of pairs
+        pairs.append({"a": schedule_a,"b": schedule_b,"answer": result})
+
+    return pairs
+        
     
+
+
+
 if __name__ == "__main__":
 
     # random schedule
@@ -79,5 +106,13 @@ if __name__ == "__main__":
     test_a = {"gaps": 0, "walk": 5, "early": 1, "friday": 0}
     test_b = {"gaps": 0, "walk": 5, "early": 0, "friday": 0}
     print(f"Schedule {student_pick(test_a,test_b,STUDENTS['hates_early'])} WINS!")
-    
-    
+    print('-'*30)
+    # make 5 pairs for 'hates_early' student
+    test_pairs = make_pairs(STUDENTS['hates_early'],5)
+    print(f"Test pairs: {len(test_pairs)}")
+    # print each pair
+    for pairs in test_pairs:
+        print(pairs)
+# Sample output: {'a': {'gaps': 1, 'walk': 13, 'early': 0, 'friday': 0}, 
+# 'b': {'gaps': 3, 'walk': 6, 'early': 1, 'friday': 0}, 'answer': 'A'}
+# ^^ Student picks A, accepting to walk more than twice as long to avoid the 8am class - Exactly how hates-early would behave
