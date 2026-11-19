@@ -3,6 +3,15 @@ import random
 # max values of features
 MAX_VALUES = {"gaps": 4,"walk": 15, "early": 1, "friday": 1}
 
+# create fake students
+# 0-5 scale determines how much this student dislikes this feature
+# 0 = doesn't care, 5 = I HATE THIS!
+STUDENTS = {
+    "hates_early": {"gaps": 0,"walk": 3, "early": 5, "friday": 2},
+    "hates_gaps": {"gaps": 5,"walk": 1, "early": 0, "friday": 1},
+    "hates_walking_fridays": {"gaps": 2,"walk": 4, "early": 1, "friday": 5}
+}
+
 def random_schedule():
     """This function chooses a random schedule with random 
     features we can use as test data"""
