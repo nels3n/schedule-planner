@@ -1,10 +1,11 @@
 import random
-from planner.scoring import MAX_VALUES, scale_features, score_schedule
+from planner.scoring import scale_features, MAX_VALUES, score_schedule
 
 
-# create fake students
+# create 3 fake students
 # 0-5 scale determines how much this student dislikes this feature
 # 0 = doesn't care, 5 = I HATE THIS!
+
 STUDENTS = {
     "hates_early": {"gaps": 0,"walk": 3, "early": 5, "friday": 2},
     "hates_gaps": {"gaps": 5,"walk": 1, "early": 0, "friday": 1},
@@ -12,8 +13,10 @@ STUDENTS = {
 }
 
 def random_schedule():
-    """This function chooses a random schedule with random 
-    features we can use as test data"""
+    """
+    This function chooses a random schedule with random 
+    features we can use as test data
+    """
     # gaps = random number of hour(s) between classes
     # walk = realistic distance in minutes to walk to a class
     # early = yes or no to a early class
@@ -23,7 +26,9 @@ def random_schedule():
     return schedule
 
 def student_pick(schedule_a,schedule_b, weights):
-    """This function will get the scores of two random schedules and compare their scores"""
+    """
+    This function will make a fake student get the scores of two random schedules and compare their scores - picks the one with the lowest
+    """
     # gets scores for each schedule
     score_a = score_schedule(schedule_a,weights)
     score_b = score_schedule(schedule_b,weights)
@@ -34,8 +39,10 @@ def student_pick(schedule_a,schedule_b, weights):
         return "B"
 
 def make_pairs(weights,num_pairs):
-    """This function will generate random schedule pairs (A and B), filter out ties,
-    Record the correct anser for each pair (one the student picks) and return the full list (num_pairs)"""
+    """
+    This function will generate random schedule pairs (A and B), filter out ties,
+    Record the correct anser for each pair (one the student picks) and return the full list (num_pairs)
+    """
     # empty list to hold the pairs
     pairs = []
     # keep going while the length of pairs is less than the number of pairs needed
@@ -56,7 +63,7 @@ def make_pairs(weights,num_pairs):
 
     return pairs
         
-    
+
 if __name__ == "__main__":
 
     # random schedule
