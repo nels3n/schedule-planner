@@ -1,0 +1,53 @@
+CRN,Class Abrv,Course Num,Lab?,Course Name,Days,Start Time,End Time,Location
+11785,CSCI,1010,0,Computer Science Colloquium,"Tuesday, Thursday",11:20 AM,12:20 PM,REMOTE
+11629,CSCI,1150,0,Computer Orientation,"Tuesday, Thursday",9:40 AM,11:05 AM,REMOTE
+10004,CSCI,1170,0,Computer Science I,"Monday, Wednesday, Friday",8:00 AM,8:55 AM,KOM
+10004,CSCI,1170,1,Computer Science I Lab,"Monday, Wednesday",9:10 AM,10:10 AM,KOM
+14378,CSCI,1170,0,Computer Science I,"Monday, Wednesday",2:20 PM,3:45 PM,KOM
+14378,CSCI,1170,1,Computer Science I Lab,"Monday, Wednesday",3:55 PM,4:55 PM,KOM
+13437,CSCI,1170,0,Computer Science I,"Tuesday, Thursday",2:40 PM,4:05 PM,KOM
+13437,CSCI,1170,1,Computer Science I Lab,"Tuesday, Thursday",4:20 PM,5:20 PM,KOM
+11091,CSCI,1170,0,Computer Science I,"Tuesday, Thursday",9:40 AM,11:05 AM,KOM
+11091,CSCI,1170,1,Computer Science I Lab,"Tuesday, Thursday",11:20 AM,12:20 PM,KOM
+16428,CSCI,1170,0,Computer Science I,"Monday, Wednesday",12:40 PM,2:05 PM,KOM
+16428,CSCI,1170,1,Computer Science I Lab,"Monday, Wednesday",2:20 PM,3:20 PM,KOM
+10005,CSCI,2170,0,Computer Science II,"Monday, Wednesday",2:20 PM,3:45 PM,KOM
+10005,CSCI,2170,1,Computer Science II Lab,"Monday, Wednesday",3:55 PM,4:55 PM,KOM
+12516,CSCI,2170,0,Computer Science II,"Monday, Wednesday",9:40 AM,11:15 AM,KOM
+12516,CSCI,2170,1,Computer Science II Lab,"Monday, Wednesday",11:20 AM,12:20 PM,KOM
+12926,CSCI,2170,0,Computer Science II,"Tuesday, Thursday",8:00 AM,9:25 AM,KOM
+12926,CSCI,2170,1,Computer Science II Lab,"Tuesday, Thursday",9:40 AM,10:40 AM,KOM
+10836,CSCI,3037,0,Computer Languages: Visual Programming,"Tuesday, Thursday",1:00 PM,2:25 PM,KOM
+10006,CSCI,3080,0,Discrete Structures,"Tuesday, Thursday",11:20 AM,12:45 PM,KOM
+10007,CSCI,3110,0,Algorithms and Data Structures,"Tuesday, Thursday",11:20 AM,12:45 PM,KOM
+10008,CSCI,3130,0,Assembly and Computer Organization,"Monday, Wednesday",8:00 AM,9:25 AM,KOM
+10008,CSCI,3130,1,Assembly and Computer Organization,Monday,9:40 AM,11:40 AM,KOM
+12767,CSCI,3130,0,Assembly and Computer Organization,"Monday, Wednesday",12:40 PM,2:05 PM,KOM
+12767,CSCI,3130,1,Assembly and Computer Organization,Monday,2:20 PM,4:20 PM,KOM
+10009,CSCI,2160,0,Introduction to Assembly Language,"Tuesday, Thursday",1:00 PM,2:25 PM,KOM
+12923,CSCI,3200,0,Introduction to Analysis of Algorithms,"Tuesday, Thursday",8:00 AM,9:25 AM,KOM
+10010,CSCI,3210,0,Theory of Programming,"Monday, Wednesday",12:40 PM,2:05 PM,KOM
+10985,CSCI,3240,0,Introduction to Computer Systems,"Tuesday, Thursday",9:40 AM,11:05 AM,KOM
+10985,CSCI,3240,1,Introduction to Computer Systems,Tuesday,11:20 AM,1:20 PM,KOM
+11332,CSCI,4160,0,Compiler Design and Software Development,"Monday, Wednesday",2:20 PM,3:45 PM,KOM
+16668,CSCI,4160,0,Compiler Design and Software Development,"Monday, Wednesday",2:20 PM,3:45 PM,KOM
+15880,CSCI,4360,0,Intelligent Robot System,"Tuesday, Thursday",2:40 PM,4:05 PM,KOM
+12765,CSCI,4400,0,Network Security,"Tuesday, Thursday",11:20 AM,12:45 PM,KOM
+10538,CSCI,4410,0,Web Technologies,"Tuesday, Thursday",1:00 PM,2:25 PM,KOM
+12924,CSCI,4560,0,Database Management Systems,"Tuesday, Thursday",4:20 PM,5:45 PM,KOM
+11786,CSCI,4700,0,Software Engineering,"Tuesday, Thursday",9:40 AM,10:40 AM,KOM
+13587,CSCI,4710,0,Secure Software Systems,"Monday, Wednesday, Friday",9:10 AM,10:05 AM,KOM
+11333,CSCI,4850,0,Neural Networks,"Monday, Wednesday, Friday",10:20 AM,11:15 AM,KOM
+12766,CSCI,5400,0,Network Security,"Tuesday, Thursday",11:20 AM,12:25 PM,KOM
+10539,CSCI,5410,0,Web Technologies,"Tuesday, Thursday",1:00 PM,2:25 PM,KOM
+12925,CSCI,5560,0,Database Management Systems,"Tuesday, Thursday",4:20 PM,5:45 PM,KOM
+10878,CSCI,5700,0,Software Engineering,"Tuesday, Thursday",9:40 AM,10:40 AM,KOM
+13588,CSCI,5710,0,Secure Software Systems,"Monday, Wednesday, Friday",9:10 AM,10:05 AM,KOM
+11334,CSCI,5850,0,Neural Networks,"Monday, Wednesday, Friday",10:20 AM,11:15 AM,KOM
+12769,CSCI,6250,0,Advanced Operating Systems,"Tuesday, Thursday",8:00 AM,9:25 AM,KOM
+16430,CSCI,6300,0,Networks,"Tuesday, Thursday",1:00 PM,2:25 PM,KOM
+14820,CSCI,6350,0,Selected Topic in Artificial Intelligence: Quantum AI,"Monday, Wednesday",12:40 PM,2:05 PM,KOM
+13184,CSCI,6560,0,Selected Topic in Database: Big Data,"Tuesday, Thursday",6:00 PM,7:25 PM,KOM
+10752,CSCI,6620,0,Research Methods in Computer Science,"Monday, Wednesday",2:20 PM,3:45 PM,KOM
+16429,CSCI,6700,0,Selected Topics in Software Engineering: Quantum Software Engineering,"Monday, Wednesday",8:00 AM,9:25 AM,KOM
+12077,CSCI,7400,0,Cloud Computing for Data Analysis,"Tuesday, Thursday",2:40 PM,4:05 PM,KOM
