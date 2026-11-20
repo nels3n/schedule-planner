@@ -21,5 +21,6 @@ We will compare the planner against one that never learns, using the prediction 
 - Degree requirements: catalog.mtsu.edu
 - Class times: PipelineMT class search (course info only, no personal student data)
 - Buildings: MTSU campus map and Google Maps
+- CSCI class sections for Spring 2027 were collected from PipelineMT class search on November 19th, 2026
 
 *Unoffical student project for CSCI 4350.*
