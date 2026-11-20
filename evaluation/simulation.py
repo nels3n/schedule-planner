@@ -7,9 +7,9 @@ from planner.scoring import scale_features, MAX_VALUES, score_schedule
 # 0 = doesn't care, 5 = I HATE THIS!
 
 STUDENTS = {
-    "hates_early": {"gaps": 0,"walk": 3, "early": 5, "friday": 2},
-    "hates_gaps": {"gaps": 5,"walk": 1, "early": 0, "friday": 1},
-    "hates_walking_fridays": {"gaps": 2,"walk": 4, "early": 1, "friday": 5}
+    "dislikes_early": {"gaps": 0,"walk": 3, "early": 5, "friday": 2},
+    "dislikes_gaps": {"gaps": 5,"walk": 1, "early": 0, "friday": 1},
+    "dislikes_walking_fridays": {"gaps": 2,"walk": 4, "early": 1, "friday": 5}
 }
 
 def random_schedule():
@@ -73,21 +73,21 @@ if __name__ == "__main__":
     print(f"Random schedule features for B: {schedule_b}")
     print(f"Features scaled (0-1) for A: {scale_features(schedule_a)}")
     print(f"Features scaled (0-1) for B: {scale_features(schedule_b)}")
-    print(f"Score A: {score_schedule(schedule_a,STUDENTS['hates_early'])}")
-    print(f"Score B: {score_schedule(schedule_b,STUDENTS['hates_early'])}")
-    print(f"Schedule {student_pick(schedule_a,schedule_b,STUDENTS['hates_early'])} WINS!")
+    print(f"Score A: {score_schedule(schedule_a,STUDENTS['dislikes_early'])}")
+    print(f"Score B: {score_schedule(schedule_b,STUDENTS['dislikes_early'])}")
+    print(f"Schedule {student_pick(schedule_a,schedule_b,STUDENTS['dislikes_early'])} WINS!")
     print('-'*30)
-    # known answer - 'hates_early' student will pick schedule b
+    # known answer - 'dislikes_early' student will pick schedule b
     test_a = {"gaps": 0, "walk": 5, "early": 1, "friday": 0}
     test_b = {"gaps": 0, "walk": 5, "early": 0, "friday": 0}
-    print(f"Schedule {student_pick(test_a,test_b,STUDENTS['hates_early'])} WINS!")
+    print(f"Schedule {student_pick(test_a,test_b,STUDENTS['dislikes_early'])} WINS!")
     print('-'*30)
-    # make 5 pairs for 'hates_early' student
-    test_pairs = make_pairs(STUDENTS['hates_early'],5)
+    # make 5 pairs for 'dislikes_early' student
+    test_pairs = make_pairs(STUDENTS['dislikes_early'],5)
     print(f"Test pairs: {len(test_pairs)}")
     # print each pair
     for pairs in test_pairs:
         print(pairs)
 # Sample output: {'a': {'gaps': 1, 'walk': 13, 'early': 0, 'friday': 0}, 
 # 'b': {'gaps': 3, 'walk': 6, 'early': 1, 'friday': 0}, 'answer': 'A'}
-# ^^ Student picks A, accepting to walk more than twice as long to avoid the 8am class - Exactly how hates-early would behave
+# ^^ Student picks A, accepting to walk more than twice as long to avoid the 8am class - Exactly how dislikes-early would behave

@@ -76,10 +76,10 @@ if __name__ == "__main__":
     import random
     random.seed(42)
     # 100 test pairs
-    test_pairs = make_pairs(STUDENTS['hates_early'],100)
-    print(f"Students' weights: {accuracy(test_pairs,STUDENTS['hates_early'])}")
+    test_pairs = make_pairs(STUDENTS['dislikes_early'],100)
+    print(f"Students' weights: {accuracy(test_pairs,STUDENTS['dislikes_early'])}")
     print(f"Starting weights: {accuracy(test_pairs, STARTING_WEIGHTS)}")
-    print(f"Experiment (LEARNER,BASELINE): {run_experiment(STUDENTS['hates_early'])}")
+    print(f"Experiment (LEARNER,BASELINE): {run_experiment(STUDENTS['dislikes_early'])}")
     # sample output: Students' weights: 1.0 , Starting weights: 0.80, baseline starts at around 89%
     # learning has to close the last 20% 
 
@@ -94,8 +94,8 @@ if __name__ == "__main__":
         plot_results(name,learner,baseline)
         print(f"Student: {name}, Learner: {learner[-1]:.1%}, Baseline: {baseline[-1]:.1%}")
 # sample output 
-# Student: hates_early, Learner: 91.5%, Baseline: 85.5%
-# Student: hates_gaps, Learner: 74.5%, Baseline: 71.0%
-# Student: hates_walking_fridays, Learner: 83.5%, Baseline: 81.0%
+# Student: dislikes_early, Learner: 91.5%, Baseline: 85.5%
+# Student: dislikes_gaps, Learner: 74.5%, Baseline: 71.0%
+# Student: dislikes_walking_fridays, Learner: 83.5%, Baseline: 81.0%
 # all students improve over the baseline
 

@@ -55,13 +55,13 @@ if __name__ == "__main__":
     test_a = {"gaps": 0, "walk": 5, "early": 1, "friday": 0}
     test_b = {"gaps": 0, "walk": 5, "early": 0, "friday": 0}
     print(f"Planner predicts: Schedule {predict(test_a,test_b,STARTING_WEIGHTS)} will win...")
-    print(f"Student picks: Schedule {student_pick(test_a,test_b,STUDENTS['hates_early'])} WINS!")
+    print(f"Student picks: Schedule {student_pick(test_a,test_b,STUDENTS['dislikes_early'])} WINS!")
 
     print('-'*30)
     test_c = {"gaps": 0, "walk": 1, "early": 1, "friday": 0}
     test_d = {"gaps": 4, "walk": 3, "early": 0, "friday": 0}
     print(f"Planner predicts: Schedule {predict(test_c,test_d,STARTING_WEIGHTS)} will win...")
-    print(f"Student picks:  Schedule {student_pick(test_c,test_d,STUDENTS['hates_early'])} WINS!")
+    print(f"Student picks:  Schedule {student_pick(test_c,test_d,STUDENTS['dislikes_early'])} WINS!")
     new_weights = update(test_c,test_d,STARTING_WEIGHTS,"B")
     print(f"New Weights: {new_weights}")
     print(f"Planner updates:  Schedule {predict(test_c,test_d,new_weights)} WINS!")
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     print()
 
 # planner thinks 4 hours of gaps in test D are worse so it picks C - this is the fix, the learning aspect (need to put in report)
-# whereas 'hates_early' student picks D because 
+# whereas 'dislikes_early' student picks D because 
 # they would rather wait around than have an 8am
 
 
