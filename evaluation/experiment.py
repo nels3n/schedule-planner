@@ -25,7 +25,8 @@ def accuracy(pairs,weights):
 
 def run_experiment(student_weights):
     """
-
+    This function runs the whole test for one simulated student and tracks 
+    how the two planners do as picks come in.
     """
     # training pairs and test pairs
     train_pairs = make_pairs(student_weights,NUM_TRAIN)
