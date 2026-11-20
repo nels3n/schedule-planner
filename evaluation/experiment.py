@@ -54,7 +54,7 @@ def run_experiment(student_weights):
 
 def plot_results(name,learner,baseline):
     """
-    This function creates a dot plot of each student
+    This function creates a line plot of each student
     """
     plt.figure()
     plt.title(f"{name}: Learner vs. Baseline")
