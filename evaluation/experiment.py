@@ -1,78 +1,74 @@
-from planner.learner import predict, STARTING_WEIGHTS, update
-from evaluation.simulation import STUDENTS, make_pairs
+from planner.scoring import score_schedule,scale_features
 
-# variables for training and test pairs
-# more test pairs for a better measure of accuracy 
-NUM_TEST = 200
-# we initally said 5-10 test pairs but need to advocate for leveling off 20-30 might be more realistic - what learner learns from - check output
-NUM_TRAIN = 20
 
-def accuracy(pairs,weights):
+# Planner does not know anything about the student - 3 acts as indifference
+STARTING_WEIGHTS = {"gaps": 3, "walk": 3, "early": 3, "friday": 3}
+# constant learning rate we chose
+LEARNING_RATE = 0.5 
+
+
+def predict(schedule_a,schedule_b,weights):
     """
-    This function is given a list of pairs and a set of weights, it will return
-    the share of pairs where predict() matches the stored answer
+    This function will return the planner's guess by getting the scores of two schedules and comparing
     """
-    # counter for correct predictions
-    count = 0
-    for pair in pairs:
-        # get schedule_a, get schedule_b, correct answer
-        result = predict(pair["a"],pair["b"],weights)
-        # if the prediction is equal to the stored answer: count + 1
-        if result == pair["answer"]:
-            count += 1
-    return count/len(pairs)
+    # gets scores for each schedule
+    score_a = score_schedule(schedule_a,weights)
+    score_b = score_schedule(schedule_b,weights)
+    # compare scores
+    if score_a < score_b:
+        return "A"
+    else:
+        return "B"
 
-def run_experiment(student_weights):
+def update(schedule_a,schedule_b,weights,answer):
     """
-
+    This function will adjust the weights when the planner is wrong by our learning rate 0.5
     """
-    # training pairs and test pairs
-    train_pairs = make_pairs(student_weights,NUM_TRAIN)
-    test_pairs = make_pairs(student_weights,NUM_TEST)
-    # set to starting weights because update() never changes dictionary given
-    # baseline is untouched because it does not learn
-    learner_weights = STARTING_WEIGHTS
-    # lists for accuracies of learner and baseline
-    learner_acc = []
-    baseline_acc = []
-    # starting point is 0 for both
-    learner_acc.append(accuracy(test_pairs,learner_weights))
-    baseline_acc.append(accuracy(test_pairs,STARTING_WEIGHTS))
-    # looping over training pairs
-    for pair in train_pairs:
-        # predict with pair's scheudle and learner's current weights
-        learn_predict = predict(pair["a"],pair["b"],learner_weights)
-        # if wrong answer
-        if learn_predict != pair["answer"]:
-            # update leaner_weights
-            learner_weights = update(pair["a"],pair["b"],learner_weights,pair["answer"])
-        learner_acc.append(accuracy(test_pairs,learner_weights))
-        baseline_acc.append(accuracy(test_pairs,STARTING_WEIGHTS))
-    return learner_acc, baseline_acc
+    # set picked/rejected 
+    if answer == "A":
+        picked = schedule_a
+        rejected = schedule_b
+    else:
+        picked = schedule_b
+        rejected = schedule_a 
+    
+    scaled_picked = scale_features(picked)
+    scaled_rejected = scale_features(rejected)
+    new_weights = {}
+    # for each weight here - figure out the new value
+    for key in weights:
+        difference = scaled_rejected[key] - scaled_picked[key]
+        new_weight = weights[key] + LEARNING_RATE * difference
+        # add to dictionary
+        new_weights[key] = new_weight
 
-        
-if __name__ == "__main__":
-    import random
-    random.seed(42)
-    # 100 test pairs
-    test_pairs = make_pairs(STUDENTS['hates_early'],100)
-    print(f"Students' weights: {accuracy(test_pairs,STUDENTS['hates_early'])}")
-    print(f"Starting weights: {accuracy(test_pairs, STARTING_WEIGHTS)}")
-    print(f"Experiment (LEARNER,BASELINE): {run_experiment(STUDENTS['hates_early'])}")
-    # sample output: Students' weights: 1.0 , Starting weights: 0.80, baseline starts at around 89%
-    # learning has to close the last 20% 
+    return new_weights
 
-# After output: hate_early's real weights are gaps: 0, walk: 3, earl: 5 and friday: 2
-# so the planner is moving toawrds the right output but it has not reached the true values
-# BUT it is learning! Both start at 85.5% learner climbs to 95.5% by pick 11 so actually our 5-10 picks was pretty close.
-    # loop over all 3 students - keys and values
+
+
+
+
+if __name__ == "__main__": 
+    from evaluation.simulation import student_pick, STUDENTS
+    
+    print()
+    test_a = {"gaps": 0, "walk": 5, "early": 1, "friday": 0}
+    test_b = {"gaps": 0, "walk": 5, "early": 0, "friday": 0}
+    print(f"Planner predicts: Schedule {predict(test_a,test_b,STARTING_WEIGHTS)} will win...")
+    print(f"Student picks: Schedule {student_pick(test_a,test_b,STUDENTS['hates_early'])} WINS!")
+
     print('-'*30)
-    for name,weights in STUDENTS.items():
-        # save both lists
-        learner,baseline = run_experiment(weights)
-        print(f"Student: {name}, Learner: {learner[-1]:.1%}, Baseline: {baseline[-1]:.1%}")
-# sample output 
-# Student: hates_early, Learner: 91.5%, Baseline: 85.5%
-# Student: hates_gaps, Learner: 74.5%, Baseline: 71.0%
-# Student: hates_walking_fridays, Learner: 83.5%, Baseline: 81.0%
-# all students improve over the baseline
+    test_c = {"gaps": 0, "walk": 1, "early": 1, "friday": 0}
+    test_d = {"gaps": 4, "walk": 3, "early": 0, "friday": 0}
+    print(f"Planner predicts: Schedule {predict(test_c,test_d,STARTING_WEIGHTS)} will win...")
+    print(f"Student picks:  Schedule {student_pick(test_c,test_d,STUDENTS['hates_early'])} WINS!")
+    new_weights = update(test_c,test_d,STARTING_WEIGHTS,"B")
+    print(f"New Weights: {new_weights}")
+    print(f"Planner updates:  Schedule {predict(test_c,test_d,new_weights)} WINS!")
+    print(STARTING_WEIGHTS)
+    print()
+
+# planner thinks 4 hours of gaps in test D are worse so it picks C - this is the fix, the learning aspect (need to put in report)
+# whereas 'hates_early' student picks D because 
+# they would rather wait around than have an 8am
+
