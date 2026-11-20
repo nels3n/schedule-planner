@@ -65,3 +65,14 @@ if __name__ == "__main__":
 # After output: hate_early's real weights are gaps: 0, walk: 3, earl: 5 and friday: 2
 # so the planner is moving toawrds the right output but it has not reached the true values
 # BUT it is learning! Both start at 85.5% learner climbs to 95.5% by pick 11 so actually our 5-10 picks was pretty close.
+    # loop over all 3 students - keys and values
+    print('-'*30)
+    for name,weights in STUDENTS.items():
+        # save both lists
+        learner,baseline = run_experiment(weights)
+        print(f"Student: {name}, Learner: {learner[-1]:.1%}, Baseline: {baseline[-1]:.1%}")
+# sample output 
+# Student: hates_early, Learner: 91.5%, Baseline: 85.5%
+# Student: hates_gaps, Learner: 74.5%, Baseline: 71.0%
+# Student: hates_walking_fridays, Learner: 83.5%, Baseline: 81.0%
+# all students improve over the baseline
