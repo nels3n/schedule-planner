@@ -1,4 +1,4 @@
-crn,subjectcourse_num,is_lab,course_name,days,start_time,end_time,building
+crn,subject,course_num,is_lab,course_name,days,start_time,end_time,building
 11785,CSCI,1010,0,Computer Science Colloquium,"Tuesday, Thursday",11:20 AM,12:20 PM,REMOTE
 11629,CSCI,1150,0,Computer Orientation,"Tuesday, Thursday",9:40 AM,11:05 AM,REMOTE
 10004,CSCI,1170,0,Computer Science I,"Monday, Wednesday, Friday",8:00 AM,8:55 AM,KOM
